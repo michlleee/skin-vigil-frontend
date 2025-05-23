@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+.whowe-container {
+    background-color: #dbe4f3;
+    margin-top: 150px;
+    margin-bottom: 180px;
+    padding: 40px 10%;
+    display: flex;
+    justify-content: center;
+}
+  
+.whowe-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+  
+.whowe-text {
+    max-width: 50%;
+    font-family: "Poppins", sans-serif;
+}
+  
+.whowe-text h2 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+  
+.whowe-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+}
+  
+.whowe-image {
+    position: relative; 
+}
+  
+.whowe-image img {
+    width: 350px; 
+    height: auto;
+    position: absolute;
+    left: -50px;
+    margin-top: -168px;
+}
+
+.aboutus-btn {
+    font-family: "Poppins", sans-serif;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.7rem;
+    cursor: pointer;
+}

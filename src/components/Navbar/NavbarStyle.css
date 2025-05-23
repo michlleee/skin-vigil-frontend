@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #022B3A;
+    padding: 5px;
+    height: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hide {
+    transform: translateY(-100%);
+}
+
+.navbar.show {
+    transform: translateY(0);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 90px; 
+    height: auto;
+    padding-left: 30%;
+}
+
+.content-container{
+    padding-right: 2%;
+}
+
+#navbar-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar-contents li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar-contents li a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: aliceblue;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+#navbar-contents li a:hover{
+    color: rgb(115, 170, 218);
+}
+
+#navbar-contents li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: rgb(115, 170, 218);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+#navbar-contents li a:hover::after{
+    width: 60%;
+}

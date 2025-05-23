@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.main-container{
+    margin-top: 150px;
+}
+
+.how-to-txt{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.main-content-container{
+    background-color: #DAE3F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+    height: 350px;
+    margin-left: 8%;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+.step-desc{
+    margin-bottom: 50px;
+}
+
+.divider {
+    height: 330px;
+    width: 1px;
+    background-color: #112244;
+}
+
+.step-txt{
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.icon{
+    font-size: 3.3rem;
+    color: #112244;
+    transition: transform 0.6s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 2px) rotate(-5deg); }
+    75% { transform: translate(2px, 2px) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.icon:hover{
+    color: rgb(23, 60, 92);
+    animation: shake 0.3s ease-in-out;
+}
