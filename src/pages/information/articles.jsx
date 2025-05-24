@@ -62,9 +62,10 @@ const Articles = () => {
       slider.style.animationPlayState = "running"
     }
 
-    // Calculate animation duration based on number of cards
-    // More cards = longer duration for consistent speed
-    const duration = articles.length * 5 // 5 seconds per card
+    // Adjust speed based on screen width
+    const isMobile = window.innerWidth <= 600
+    const secondsPerCard = isMobile ? 1 : 5
+    const duration = articles.length * secondsPerCard
     slider.style.animationDuration = `${duration}s`
   }, [isPaused, articles.length])
 

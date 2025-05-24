@@ -91,3 +91,27 @@
   box-orient: vertical;
   overflow: hidden;
 }
+
+@media (max-width: 600px) {
+  .article-slider {
+    align-items: center;
+  }
+  .article-card {
+    width: 60%;
+    margin-bottom: 1rem;
+    height: 200px;
+  }
+  .article-title {
+    font-size: 1.5rem;
+    padding-top: 5%;
+  }
+  .article-slider {
+    gap: 1rem;
+  }
+  .article-heading {
+    font-size: 1rem;
+  }
+  .article-description {
+    font-size: 0.8rem;
+  }
+}

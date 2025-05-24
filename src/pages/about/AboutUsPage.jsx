@@ -4,7 +4,7 @@ import { Instagram, Twitter, Facebook } from 'lucide-react';
 import emailIcon from '../../assets/aboutUs/email.png'
 import phoneIcon from '../../assets/aboutUs/phone.png'
 import webIcon from '../../assets/aboutUs/website.png'
-import aboutUsImg from '../../assets/aboutUs/AboutUs.png'
+import aboutUsImg from '../about/aboutUsBanner.png';
 
 function AboutUsPage() {
   return (
@@ -12,6 +12,7 @@ function AboutUsPage() {
       
       <div className="banner">
         <img src={aboutUsImg} alt="About Us Banner" />
+        <h1 className="banner-title">About <span>Us</span></h1>
       </div>
 
       <div className="content">
@@ -75,10 +76,6 @@ function AboutUsPage() {
         </div>
 
       </div>
-
-      {/* Footer */}
-      <footer className="bg-[#0B2447] text-white text-center py-4 mt-auto">
-      </footer>
     </div>
   );
 }
