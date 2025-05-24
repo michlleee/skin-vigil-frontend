@@ -53,7 +53,7 @@ const Articles = () => {
   // Duplicate articles to create seamless loop
   const isMobile = window.innerWidth <= 600;
   const allArticles = isMobile
-    ? [...articles, ...articles, ...articles, ...articles] // 4x for mobile
+    ? [...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles] // 10x for mobile
     : [...articles, ...articles]; // 2x for desktop/tablet
 
   useEffect(() => {
