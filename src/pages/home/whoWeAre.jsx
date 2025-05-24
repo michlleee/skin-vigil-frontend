@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "./whoWeAreStyles.css";
 import we from "./we.png";
 import FadeIn from "../../components/FadeInScrollEffect/FadeInScroll.jsx";
@@ -20,11 +21,11 @@ function WhoWeAre() {
                     Our experts combine AI technology with medical insights to identify skin concerns before they become serious. 
                     Awareness is the first step to protection—because your skin's health matters.
                     </p>
-                    <a href="../about-us">
+                    <Link to='/about'>
                         <ShinyButton speed={5}>
                             <button className="aboutus-btn">ABOUT US</button>
                         </ShinyButton>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </FadeIn>
