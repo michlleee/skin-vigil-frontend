@@ -16,9 +16,11 @@ function detectSection() {
               Stay informed, stay protected, and take control of your skin health today.
             </p>
             <a href="/upload">
-              <ShinyButton speed={5}>
-                <button className="upload-btn">UPLOAD IMAGE</button>
-              </ShinyButton>
+              <div className="btn-wrapper">
+                <ShinyButton speed={5}>
+                  <button className="upload-btn">UPLOAD IMAGE</button>
+                </ShinyButton>
+              </div>
             </a>
             
           </div>

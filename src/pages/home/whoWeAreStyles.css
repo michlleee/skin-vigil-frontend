@@ -57,3 +57,51 @@
     font-size: 0.7rem;
     cursor: pointer;
 }
+
+@media (max-width: 900px) {
+    .whowe-content {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .whowe-text {
+        max-width: 100%;
+        text-align: justify;
+    }
+  
+    .whowe-image img {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .whowe-text h2 {
+        font-size: 20px;
+    }
+  
+    .whowe-text p {
+        font-size: 14px;
+    }
+  
+    .whowe-image img {
+        width: 300px; 
+        left: -30px;
+        margin-top: -150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .whowe-text h2 {
+        font-size: 18px;
+    }
+  
+    .whowe-text p {
+        font-size: 12px;
+    }
+  
+    .whowe-image img {
+        width: 250px; 
+        left: -20px;
+        margin-top: -130px;
+    }
+}

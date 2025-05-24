@@ -2,7 +2,6 @@ import MottoSection from "./motto";
 import DetectionSection from "./detectSection";
 import HowTo from "./howTo";
 import WhoWeAre from "./whoWeAre";
-// import UVIndexMap from "../../components/UvIndexMap/UvIndexMap";
 
 function Home(){
   return (
@@ -11,7 +10,6 @@ function Home(){
       <DetectionSection />
       <HowTo />
       <WhoWeAre />
-      {/* <UVIndexMap /> */}
     </>
   );
 };

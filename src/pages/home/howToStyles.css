@@ -14,13 +14,13 @@
 .main-content-container{
     background-color: #DAE3F7;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 15px;
     padding: 30px;
     width: 80%;
     height: 350px;
-    margin-left: 8%;
+    margin: 0 auto;
 }
 
 .step {
@@ -28,12 +28,13 @@
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
-    padding: 20px;
+    padding-top: 30px;
 }
 
 .step-desc{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
+
 
 .divider {
     height: 330px;
@@ -42,7 +43,7 @@
 }
 
 .step-txt{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
@@ -65,4 +66,80 @@
 .icon:hover{
     color: rgb(23, 60, 92);
     animation: shake 0.3s ease-in-out;
+}
+
+
+@media (max-width: 900px) {
+    .main-content-container {
+        height: auto;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .step {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+  .main-content-container {
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+    margin-left: 1%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .divider {
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #112244;
+  }
+
+  .step {
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+
+  .step-txt {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-content-container {
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .step {
+    padding: 5px 0;
+    font-size: 0.9rem;
+  }
+
+  .step-txt {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
 }

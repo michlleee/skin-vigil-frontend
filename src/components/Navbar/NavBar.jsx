@@ -6,6 +6,7 @@ import "./NavbarStyle.css";
 function Navbar() {
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,14 +27,24 @@ function Navbar() {
             <a href="/" className="logo-container">
                 <img src={logo} alt="Logo" className="logo"/>
             </a>
-            <div className="content-container">
-                <ul id="navbar-contents">
-                <li><Link to="/" className="active">Home</Link></li>
-                    <li><Link to="/upload">Upload</Link></li>
-                    <li><Link to="/information">Information</Link></li>
-                    <li><Link to="/about-us">About Us</Link></li>
+
+            <button
+                className="hamburger"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle navigation"
+            >
+                ☰
+            </button>
+
+            <div className={`content-container ${menuOpen ? "open" : ""}`}>
+                <ul className="navbar-contents">
+                <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+                <li><Link to="/upload" onClick={() => setMenuOpen(false)}>Upload</Link></li>
+                <li><Link to="/information" onClick={() => setMenuOpen(false)}>Information</Link></li>
+                <li><Link to="/about-us" onClick={() => setMenuOpen(false)}>About Us</Link></li>
                 </ul>
             </div>
+
         </nav>
     );
 }
