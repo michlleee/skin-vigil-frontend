@@ -53,7 +53,7 @@ const Articles = () => {
   // Duplicate articles to create seamless loop
   const isMobile = window.innerWidth <= 600;
   const allArticles = isMobile
-    ? [...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles, ...articles] // 10x for mobile
+    ? [...articles, ...articles, ...articles, ...articles] // 4x for mobile
     : [...articles, ...articles]; // 2x for desktop/tablet
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const Articles = () => {
     }
 
     // Adjust speed based on screen width
-    const secondsPerCard = isMobile ? 1 : 5
+    const secondsPerCard = isMobile ? 2.5 : 5
     const duration = articles.length * secondsPerCard
     slider.style.animationDuration = `${duration}s`
   }, [isPaused, articles.length])
