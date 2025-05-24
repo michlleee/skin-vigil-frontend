@@ -20,7 +20,7 @@ function WhoWeAre() {
                     Our experts combine AI technology with medical insights to identify skin concerns before they become serious. 
                     Awareness is the first step to protection—because your skin's health matters.
                     </p>
-                    <a href="/about-us">
+                    <a href="../about-us">
                         <ShinyButton speed={5}>
                             <button className="aboutus-btn">ABOUT US</button>
                         </ShinyButton>

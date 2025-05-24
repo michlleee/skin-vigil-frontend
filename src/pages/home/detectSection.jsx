@@ -15,7 +15,7 @@ function detectSection() {
               and our AI-powered analysis will assess potential risks in seconds. 
               Stay informed, stay protected, and take control of your skin health today.
             </p>
-            <a href="/upload">
+            <a href="../upload">
               <div className="btn-wrapper">
                 <ShinyButton speed={5}>
                   <button className="upload-btn">UPLOAD IMAGE</button>
