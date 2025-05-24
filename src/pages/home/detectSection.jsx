@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "./detectSectionStyles.css";
 import micro from "./micro.png"
 import FadeIn from "../../components/FadeInScrollEffect/FadeInScroll.jsx";
@@ -15,13 +16,13 @@ function detectSection() {
               and our AI-powered analysis will assess potential risks in seconds. 
               Stay informed, stay protected, and take control of your skin health today.
             </p>
-            <a href="/upload">
+            <Link to='/upload'>
               <div className="btn-wrapper">
                 <ShinyButton speed={5}>
                   <button className="upload-btn">UPLOAD IMAGE</button>
                 </ShinyButton>
               </div>
-            </a>
+            </Link>
             
           </div>
 
