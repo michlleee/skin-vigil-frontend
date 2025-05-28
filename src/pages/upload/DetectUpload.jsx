@@ -37,6 +37,15 @@ function UploadSection() {
         body: formData,
         mode: "cors",
       });
+
+      
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error("❌ Backend error:", errorText);
+        alert(`Backend error: ${errorText}`);
+        return;
+      }
+
       const data = await res.json();
       setResult(data);
     } catch (error) {
