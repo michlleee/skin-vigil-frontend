@@ -30,7 +30,7 @@ function UploadSection() {
     formData.append("file", selectedImage.file);
   
     try {
-      const res = await fetch("http://localhost:5000/DetectUpload", {
+      const res = await fetch("https://skin-vigil-backend-production.up.railway.app/api/detect_upload", {
         method: "POST",
         body: formData,
         mode: "cors",
