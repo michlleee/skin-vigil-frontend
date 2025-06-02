@@ -148,14 +148,25 @@ function UploadSection() {
 
       {result && (
         <div className="result-box">
-          <h3>Result:</h3>
-          <p>
-            <strong>Prediction:</strong> {result.prediction}
-          </p>
-          <p>
-            <strong>Confidence:</strong> {(result.confidence * 100).toFixed(2)}%
-          </p>
-          {result.prediction.toLowerCase().includes("cancer") ? (
+          <div className="result-header">
+            <span className="result-icon">📝</span>
+            <span className="result-title">Detection Result</span>
+          </div>
+          <div className="result-details">
+            <div className="result-label">Prediction</div>
+            <div className="result-value">{result.prediction}</div>
+            <div className="result-label">Confidence</div>
+            <div className="result-confidence">
+              <span className="confidence-bar-bg">
+                <span
+                  className="confidence-bar"
+                  style={{ width: `${(result.confidence * 100).toFixed(2)}%` }}
+                ></span>
+              </span>
+              <span className="confidence-text">{(result.confidence * 100).toFixed(2)}%</span>
+            </div>
+          </div>
+          {result.prediction.toLowerCase().includes("cancer detected") ? (
             <div className="warning-box">
               <h4>⚠️ Possible Skin Cancer Detected</h4>
               <p>
