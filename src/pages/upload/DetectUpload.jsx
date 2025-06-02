@@ -3,6 +3,33 @@ import "./UploadSectionStyles.css";
 import { useState } from "react";
 import { FaFolderOpen } from "react-icons/fa";
 
+const sampleImages = [
+  {
+    url: "./samples/sample1.jpg",
+    name: "sample1.jpg"
+  },
+  {
+    url: "./samples/sample2.jpg",
+    name: "sample2.jpg"
+  },
+  {
+    url: "./samples/sample3.jpeg",
+    name: "sample3.jpeg"
+  },
+  {
+    url: "./samples/sample4.jpg",
+    name: "sample4.jpg"
+  },
+  {
+    url: "./samples/sample5.jpg",
+    name: "sample5.jpg"
+  },
+  {
+    url: "./samples/sample6.jpg",
+    name: "sample6.jpg"
+  },
+];
+
 function UploadSection() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -56,6 +83,15 @@ function UploadSection() {
     }
   };
 
+  const handleDownload = (img) => {
+    const link = document.createElement("a");
+    link.href = img.url;
+    link.download = img.name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="upload-container">
       <h2 className="upload-title">UPLOAD A PICTURE</h2>
@@ -93,14 +129,54 @@ function UploadSection() {
       >
         {loading ? "Detecting..." : "DETECT"}
       </button>
+      
+      <div className="available-images">
+        <h4>Try with these sample images:</h4>
+        <div className="sample-images-row">
+          {sampleImages.map((img, idx) => (
+            <img
+              key={idx}
+              src={img.url}
+              alt={`Sample ${idx + 1}`}
+              className="sample-image"
+              onClick={() => handleDownload(img)}
+              title="Click to download"
+            />
+          ))}
+        </div>
+      </div>
 
       {result && (
         <div className="result-box">
           <h3>Result:</h3>
-          <p><strong>Prediction:</strong> {result.prediction}</p>
-          <p><strong>Confidence:</strong> {(result.confidence * 100).toFixed(2)}%</p>
+          <p>
+            <strong>Prediction:</strong> {result.prediction}
+          </p>
+          <p>
+            <strong>Confidence:</strong> {(result.confidence * 100).toFixed(2)}%
+          </p>
+          {result.prediction.toLowerCase().includes("cancer") ? (
+            <div className="warning-box">
+              <h4>⚠️ Possible Skin Cancer Detected</h4>
+              <p>
+                Please contact the nearest hospital or a certified dermatologist as soon as possible for further examination.
+              </p>
+              <a className="contact-link" href="tel:112">
+                📞 Call Emergency: 112
+              </a>
+            </div>
+          ) : (
+            <div className="safe-box">
+              <h4>✅ No Cancer Detected</h4>
+              <p>
+                Your result does not indicate skin cancer. Keep monitoring your skin and stay vigilant!
+              </p>
+            </div>
+          )}
         </div>
       )}
+
+
     </div>
   );
 }
