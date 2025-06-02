@@ -149,7 +149,6 @@ function UploadSection() {
       {result && (
         <div className="result-box">
           <div className="result-header">
-            <span className="result-icon">📝</span>
             <span className="result-title">Detection Result</span>
           </div>
           <div className="result-details">

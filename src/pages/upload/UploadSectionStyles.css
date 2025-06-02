@@ -110,7 +110,7 @@ body {
 
 .sample-images-row {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   overflow-x: auto;
   padding-bottom: 8px;
   justify-content: center;
@@ -118,8 +118,8 @@ body {
 }
 
 .sample-image {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #e0e0e0;
@@ -146,10 +146,6 @@ body {
   justify-content: center;
   gap: 10px;
   margin-bottom: 18px;
-}
-
-.result-icon {
-  font-size: 2rem;
 }
 
 .result-title {
