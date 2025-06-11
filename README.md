@@ -1,6 +1,6 @@
 # Skin Vigil
 
-Skin Vigil is a web application designed to help users detect skin cancer early using AI-based image analysis. The website also provides useful information about skin cancer and real-time environmental data to promote skin health awareness.
+Skin Vigil is a web application designed to help users detect skin cancer early using AI-based image analysis. The website also provides useful information about skin cancer to promote skin health awareness.
 
 ---
 
