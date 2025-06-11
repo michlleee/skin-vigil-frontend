@@ -34,4 +34,4 @@ Skin Vigil is a web application designed to help users detect skin cancer early 
 1. Clone the repo:
    ```bash
    git clone https://github.com/michl1eee/skin-vigil-website.git
-   cd skin-vigil-website
+   cd skin-vigil-frontend
