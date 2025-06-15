@@ -28,9 +28,10 @@ Skin Vigil is a web application designed to help users detect skin cancer early 
 - **Other:** CSS modules for styling
 
 ---
+
 ## Website Link
 
-skin-vigil-frontend.vercel.app
+https://skin-vigil-frontend.vercel.app
 
 ---
 
